@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { HeroCanvas } from "@/components/hero-canvas";
 import { MagneticButton } from "@/components/magnetic-button";
 import { Reveal, SplitWords } from "@/components/reveal";
-import { principles, process, sectors, services, site } from "@/lib/site";
+import { capabilities, principles, process, services, site } from "@/lib/site";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -13,7 +13,7 @@ function Home() {
       <section className="relative isolate min-h-dvh overflow-hidden">
         <img
           src="/images/hero.jpg"
-          alt="Switchgear hall in a modern industrial plant"
+          alt="A 3D mechanical component with a finite element analysis stress visualization"
           className="absolute inset-0 size-full object-cover"
         />
         <div className="absolute inset-0 bg-bg/72" />
@@ -26,20 +26,20 @@ function Home() {
             {site.blurb}
           </p>
           <h1 className="mt-5 max-w-4xl font-display text-display font-medium text-fg">
-            <SplitWords text="Engineering advice you can act on." />
+            <SplitWords text="Product development, from first concept to solution." />
           </h1>
           <p
             className="mt-6 max-w-xl text-lead text-fg/75"
             style={{ animation: "fade-up 800ms 280ms var(--ease-out) both" }}
           >
-            AXIA is a new consulting practice helping project teams make clear decisions about
-            electrical and mechanical systems.
+            ShanSolution India provides engineering support throughout product development, including
+            2D CAD drawing creation, 3D modelling, and FEA validation.
           </p>
           <div
             className="mt-10 flex flex-wrap items-center gap-3"
             style={{ animation: "fade-up 800ms 380ms var(--ease-out) both" }}
           >
-            <MagneticButton to="/contact">Talk to an engineer</MagneticButton>
+            <MagneticButton to="/contact">Share your brief</MagneticButton>
             <MagneticButton to="/approach" variant="ghost">
               How we work
             </MagneticButton>
@@ -53,14 +53,14 @@ function Home() {
           <Reveal className="md:col-span-5">
             <p className="kicker">A focused practice</p>
             <h2 className="mt-4 font-display text-title font-medium">
-              Practical engineering for complex decisions.
+              Engineering support around your product brief.
             </h2>
           </Reveal>
           <Reveal className="md:col-span-6 md:col-start-7" delay={80}>
             <p className="text-lead text-muted">
-              We help define the problem, assess technical options, and give project teams a clear
-              basis for their next decision. Engagements are scoped to the project and the support
-              it needs.
+              We support product development from the initial idea through design work and
+              validation. The scope can cover the full development journey or a specific 2D CAD, 3D
+              modelling, or FEA requirement.
             </p>
           </Reveal>
         </div>
@@ -82,7 +82,7 @@ function Home() {
           <Reveal>
             <p className="kicker kicker-ink">What we do</p>
             <h2 className="mt-4 max-w-2xl font-display text-title font-medium">
-              Electrical and mechanical expertise, connected.
+              From first concept to engineering validation.
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-px overflow-hidden rounded-xl bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
@@ -118,24 +118,24 @@ function Home() {
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal>
-              <p className="kicker">Sectors</p>
+              <p className="kicker">CAD & FEA</p>
               <h2 className="mt-4 font-display text-title font-medium">
-                Technical support for demanding environments.
+                Design detail and analysis for product development.
               </h2>
             </Reveal>
             <Reveal delay={80}>
-              <Link to="/sectors" className="text-sm font-semibold text-steel hover:text-fg">
-                Explore sectors →
+              <Link to="/capabilities" className="text-sm font-semibold text-steel hover:text-fg">
+                Explore capabilities →
               </Link>
             </Reveal>
           </div>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {sectors.map((sector, i) => (
-              <Reveal key={sector.slug} delay={i * 50}>
+            {capabilities.map((capability, i) => (
+              <Reveal key={capability.slug} delay={i * 50}>
                 <article className="h-full rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] sm:p-7">
                   <p className="kicker">{String(i + 1).padStart(2, "0")}</p>
-                  <h3 className="mt-4 font-display text-2xl font-medium">{sector.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">{sector.copy}</p>
+                  <h3 className="mt-4 font-display text-2xl font-medium">{capability.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{capability.summary}</p>
                 </article>
               </Reveal>
             ))}
@@ -167,9 +167,9 @@ function Home() {
         <div className="marquee-track flex w-max gap-12 px-8 text-sm tracking-[0.22em] text-muted uppercase">
           {[...Array(2)].map((_, copy) => (
             <div key={copy} className="flex gap-12">
-              {sectors.map((sector) => (
-                <span key={`${copy}-${sector.slug}`} className="flex items-center gap-12">
-                  {sector.title}
+              {capabilities.map((capability) => (
+                <span key={`${copy}-${capability.slug}`} className="flex items-center gap-12">
+                  {capability.title}
                   <span className="current-dot inline-block size-1.5 rounded-full bg-steel" />
                 </span>
               ))}
@@ -183,7 +183,7 @@ function Home() {
           <Reveal>
             <p className="kicker kicker-ink">Next</p>
             <h2 className="mt-4 max-w-xl font-display text-title font-medium">
-              Send the problem. We will tell you if we are the right desk.
+              Tell us what you are developing and the support you need.
             </h2>
           </Reveal>
           <Reveal delay={80}>
@@ -191,7 +191,7 @@ function Home() {
               to="/contact"
               className="inline-flex h-12 items-center gap-2 rounded-md bg-ink px-5 text-sm font-semibold text-paper transition-transform duration-150 hover:bg-bg active:scale-[0.96]"
             >
-              Start a brief
+              Contact ShanSolution India
               <ArrowUpRight className="size-4" />
             </Link>
           </Reveal>
