@@ -124,7 +124,7 @@ function Home() {
               </h2>
             </Reveal>
             <Reveal delay={80}>
-              <Link to="/capabilities" className="text-sm font-semibold text-steel hover:text-fg">
+              <Link to="/capabilities" className="text-sm font-semibold text-brand hover:text-fg">
                 Explore capabilities →
               </Link>
             </Reveal>
@@ -189,7 +189,7 @@ function Home() {
           <Reveal delay={80}>
             <Link
               to="/contact"
-              className="inline-flex h-12 items-center gap-2 rounded-md bg-ink px-5 text-sm font-semibold text-paper transition-transform duration-150 hover:bg-bg active:scale-[0.96]"
+              className="inline-flex h-12 items-center gap-2 rounded-md bg-brand px-5 text-sm font-semibold text-white transition-[transform,background-color] duration-150 hover:bg-brand-strong active:scale-[0.96]"
             >
               Contact ShanSolution India
               <ArrowUpRight className="size-4" />

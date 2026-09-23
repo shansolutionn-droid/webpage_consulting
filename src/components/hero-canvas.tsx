@@ -105,7 +105,7 @@ export function HeroCanvas() {
 
       const step = 56;
       ctx.beginPath();
-      ctx.strokeStyle = "rgba(231, 226, 214, 0.045)";
+      ctx.strokeStyle = "rgba(130, 191, 232, 0.07)";
       ctx.lineWidth = 1;
       for (let x = 0; x <= width; x += step) {
         ctx.moveTo(x, 0);
@@ -124,7 +124,7 @@ export function HeroCanvas() {
           if (i === 0) ctx.moveTo(x, y);
           else ctx.lineTo(x, y);
         });
-        ctx.strokeStyle = "rgba(167, 176, 184, 0.28)";
+        ctx.strokeStyle = "rgba(126, 177, 216, 0.34)";
         ctx.lineWidth = 1.15;
         ctx.stroke();
 
@@ -132,11 +132,11 @@ export function HeroCanvas() {
         const p = pointAt(trace.points, Math.max(0, Math.min(total, head)));
         if (p) {
           ctx.beginPath();
-          ctx.fillStyle = "rgba(231, 226, 214, 0.85)";
+          ctx.fillStyle = "rgba(67, 187, 255, 0.92)";
           ctx.arc(p[0], p[1], 2.2, 0, Math.PI * 2);
           ctx.fill();
           ctx.beginPath();
-          ctx.fillStyle = "rgba(167, 176, 184, 0.18)";
+          ctx.fillStyle = "rgba(8, 120, 189, 0.24)";
           ctx.arc(p[0], p[1], 9, 0, Math.PI * 2);
           ctx.fill();
         }

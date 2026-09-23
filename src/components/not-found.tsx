@@ -10,7 +10,7 @@ export function NotFound() {
       </p>
       <Link
         to="/"
-        className="mt-4 inline-flex h-11 items-center rounded-md bg-paper px-5 text-sm font-semibold text-ink"
+        className="mt-4 inline-flex h-11 items-center rounded-md bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-strong"
       >
         Home
       </Link>

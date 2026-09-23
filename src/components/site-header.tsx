@@ -1,7 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Mark } from "@/components/mark";
+import { BrandLogo } from "@/components/brand-logo";
 import { nav, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -71,10 +71,9 @@ export function SiteHeader() {
           : "bg-transparent text-fg",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-[4.25rem] sm:px-8">
-        <Link to="/" className="flex items-center gap-2.5">
-          <Mark />
-          <span className="font-display text-base tracking-tight lg:text-xl">{site.name}</span>
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:h-[5.5rem] sm:px-8">
+        <Link to="/" className="flex shrink-0 items-center" aria-label={`${site.name} home`}>
+          <BrandLogo />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-4 md:flex lg:gap-8">
@@ -96,7 +95,7 @@ export function SiteHeader() {
         <div className="hidden items-center gap-5 md:flex">
           <Link
             to="/contact"
-            className="inline-flex h-10 items-center rounded-md bg-paper px-4 text-sm font-semibold text-ink transition-transform duration-150 ease-out hover:bg-fg active:scale-[0.96]"
+            className="inline-flex h-10 items-center rounded-md bg-brand px-4 text-sm font-semibold text-white transition-transform duration-150 ease-out hover:bg-brand-strong active:scale-[0.96]"
           >
             Share a brief
           </Link>

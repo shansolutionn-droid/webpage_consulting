@@ -71,7 +71,7 @@ function AboutPage() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex h-12 items-center rounded-md bg-ink px-5 text-sm font-semibold text-paper"
+            className="inline-flex h-12 items-center rounded-md bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-strong"
           >
             Start a conversation
           </Link>

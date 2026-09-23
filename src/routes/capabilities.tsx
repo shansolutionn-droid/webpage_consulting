@@ -58,7 +58,7 @@ function CapabilitiesPage() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex h-12 items-center rounded-md bg-paper px-5 text-sm font-semibold text-ink"
+            className="inline-flex h-12 items-center rounded-md bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-strong"
           >
             Share your brief
           </Link>

@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0b0e11;
-  --color-surface: #14181c;
-  --color-paper: #e7e2d6;
-  --color-ink: #12151a;
-  --color-fg: #e7e2d6;
-  --color-muted: #8b908a;
-  --color-steel: #a7b0b8;
-  --color-line: #2a3138;
-  --color-danger: #c45b4a;
+  --color-bg: #07172a;
+  --color-surface: #0e2740;
+  --color-paper: #f1f6fa;
+  --color-ink: #10253d;
+  --color-fg: #edf5fb;
+  --color-muted: #9cafc1;
+  --color-steel: #9bb3c9;
+  --color-line: #29445f;
+  --color-brand: #0878bd;
+  --color-brand-strong: #0754a6;
+  --color-danger: #e2675e;
 
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Newsreader", "Times New Roman", serif;
@@ -29,7 +31,7 @@
 
   --shadow-border: 0 0 0 1px rgb(255 255 255 / 0.08);
   --shadow-border-hover: 0 0 0 1px rgb(255 255 255 / 0.14);
-  --shadow-paper: 0 0 0 1px rgb(18 21 26 / 0.08), 0 1px 2px rgb(18 21 26 / 0.05);
+  --shadow-paper: 0 0 0 1px rgb(16 37 61 / 0.08), 0 1px 2px rgb(16 37 61 / 0.05);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
@@ -118,18 +120,18 @@
   .veil {
     background: linear-gradient(
       180deg,
-      rgb(11 14 17 / 0.35) 0%,
-      rgb(11 14 17 / 0.55) 42%,
-      rgb(11 14 17 / 0.88) 100%
+      rgb(7 23 42 / 0.35) 0%,
+      rgb(7 23 42 / 0.58) 42%,
+      rgb(7 23 42 / 0.9) 100%
     );
   }
 
   .veil-photo {
-    background: linear-gradient(to top, rgb(11 14 17 / 0.8), transparent);
+    background: linear-gradient(to top, rgb(7 23 42 / 0.82), transparent);
   }
 
   .scan-wash {
-    background: linear-gradient(180deg, transparent, rgb(167 176 184 / 0.08), transparent);
+    background: linear-gradient(180deg, transparent, rgb(88 167 222 / 0.12), transparent);
   }
 
   .reveal {

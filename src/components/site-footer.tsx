@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mark } from "@/components/mark";
+import { BrandLogo } from "@/components/brand-logo";
 import { nav, site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -7,10 +7,7 @@ export function SiteFooter() {
     <footer className="border-t border-line bg-bg text-fg">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
-          <div className="flex items-center gap-2.5">
-            <Mark />
-            <span className="font-display text-2xl tracking-tight">{site.name}</span>
-          </div>
+          <BrandLogo className="h-28 w-42 sm:h-32 sm:w-48" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">{site.blurb}</p>
         </div>
         <div className="md:col-span-3">

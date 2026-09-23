@@ -42,7 +42,7 @@ export function MagneticButton({
       onMouseLeave={onLeave}
       className={cn(
         "inline-flex h-12 items-center gap-2 rounded-md px-5 pr-4 text-sm font-semibold tracking-tight transition-[transform,background-color,box-shadow,color] duration-200 ease-out",
-        variant === "solid" && "bg-paper text-ink hover:bg-fg",
+        variant === "solid" && "bg-brand text-white hover:bg-brand-strong",
         variant === "ghost" &&
           "bg-transparent text-fg shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)]",
         className,
