@@ -32,8 +32,8 @@ function Home() {
             className="mt-6 max-w-xl text-lead text-fg/75"
             style={{ animation: "fade-up 800ms 280ms var(--ease-out) both" }}
           >
-            ShanSolution India provides engineering support throughout product development, including
-            2D CAD drawing creation, 3D modelling, and FEA validation.
+            ShanSolution India provides engineering support throughout product development,
+            including 2D CAD drawing creation, 3D modelling, and FEA validation.
           </p>
           <div
             className="mt-10 flex flex-wrap items-center gap-3"
@@ -51,7 +51,7 @@ function Home() {
       <section className="border-b border-line bg-bg">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <p className="kicker">A focused practice</p>
+            <p className="kicker">Engineering support</p>
             <h2 className="mt-4 font-display text-title font-medium">
               Engineering support around your product brief.
             </h2>
@@ -148,7 +148,7 @@ function Home() {
           <Reveal>
             <p className="kicker">How we work</p>
             <h2 className="mt-4 font-display text-title font-medium">
-              A clear process, from question to next step.
+              A clear process, from product brief to next step.
             </h2>
           </Reveal>
           <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -164,7 +164,7 @@ function Home() {
       </section>
 
       <section className="overflow-hidden bg-bg py-10">
-        <div className="marquee-track flex w-max gap-12 px-8 text-sm tracking-[0.22em] text-muted uppercase">
+        <div className="marquee-track flex w-max gap-12 px-8 text-sm tracking-wide text-muted">
           {[...Array(2)].map((_, copy) => (
             <div key={copy} className="flex gap-12">
               {capabilities.map((capability) => (

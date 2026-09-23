@@ -9,34 +9,34 @@ function AboutPage() {
   return (
     <main>
       <PageHero
-        kicker={`About ${site.name}`}
-        title="A new consultancy. Focused on the engineering."
+        kicker="About ShanSolution India"
+        title="Engineering support for product development."
+        image="/images/product-development.jpg"
       >
-        AXIA is an early-stage engineering consultancy for electrical and mechanical systems. We
-        help project teams make clear technical decisions and move forward with confidence.
+        {site.name} provides product development support from the initial idea through CAD work and
+        FEA validation. Engagements can cover the full development journey or a specific task.
       </PageHero>
 
       <section className="bg-paper text-ink">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <p className="kicker kicker-ink">Why AXIA</p>
+            <p className="kicker kicker-ink">How we support your work</p>
             <h2 className="mt-4 font-display text-title font-medium">
-              Thoughtful engineering, scaled to the problem.
+              Support that follows the product brief.
             </h2>
           </Reveal>
           <Reveal className="space-y-5 text-sm leading-relaxed text-ink/70 lg:col-span-6 lg:col-start-7">
             <p>
-              We are building AXIA as a focused consulting practice: clear advice, practical scope,
-              and direct communication from the first conversation.
+              We begin by understanding the product, its requirements, and the engineering outputs
+              your team needs.
             </p>
             <p>
-              Work can begin with a design question, an independent review, or a system that is not
-              performing as expected. We agree the scope around the information available and the
-              decision your team needs to make.
+              Support can start with product development from scratch or focus on 2D drawing
+              creation, 3D modelling, or FEA validation for a defined stage of work.
             </p>
             <p>
-              We work with owners and project teams to make technical choices easier to understand,
-              evaluate, and act on.
+              The scope and expected outputs are agreed around the project requirements before work
+              begins.
             </p>
           </Reveal>
         </div>
@@ -67,7 +67,7 @@ function AboutPage() {
       <section className="bg-paper text-ink">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-16 sm:px-8 md:flex-row md:items-center">
           <p className="max-w-lg font-display text-3xl">
-            Have a technical question to work through?
+            Have a product idea or design task to discuss?
           </p>
           <Link
             to="/contact"

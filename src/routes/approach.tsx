@@ -1,16 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { principles, process } from "@/lib/site";
+import { principles, process, site } from "@/lib/site";
 
 export const Route = createFileRoute("/approach")({ component: ApproachPage });
 
 function ApproachPage() {
   return (
     <main>
-      <PageHero kicker="Approach" title="Start with the question that matters.">
-        As a new consultancy, AXIA is building a focused practice around careful analysis, useful
-        deliverables, and direct collaboration with project teams.
+      <PageHero
+        kicker="Approach"
+        title="From product brief to engineering solution."
+        image="/images/design-process.jpg"
+      >
+        {site.name} starts with your requirements, agrees the scope and outputs, then supports the
+        design through development and validation as needed.
       </PageHero>
 
       <section className="bg-bg">
@@ -18,7 +22,7 @@ function ApproachPage() {
           <Reveal>
             <p className="kicker">A practical process</p>
             <h2 className="mt-4 max-w-2xl font-display text-title">
-              From an open question to a clear next step.
+              A practical product-development workflow.
             </h2>
           </Reveal>
           <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -65,7 +69,7 @@ function ApproachPage() {
             to="/contact"
             className="inline-flex h-12 items-center rounded-md bg-paper px-5 text-sm font-semibold text-ink"
           >
-            Contact AXIA
+            Contact {site.name}
           </Link>
         </div>
       </section>

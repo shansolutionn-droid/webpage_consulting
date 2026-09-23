@@ -8,9 +8,9 @@ export const Route = createFileRoute("/contact")({ component: ContactPage });
 function ContactPage() {
   return (
     <main>
-      <PageHero kicker="Contact" title="Send the problem.">
-        Tell us what is happening. Your email app will open with the brief ready to send, and we
-        will review it and get back to you with a clear next step.
+      <PageHero kicker="Contact" title="Tell us what you are developing." image="/images/hero.jpg">
+        Share your product brief and the stage you are at. Your email app will open with the details
+        ready to send to {site.name}.
       </PageHero>
       <section className="bg-bg">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-12">

@@ -20,7 +20,7 @@
   --text-lead: clamp(1.05rem, 1.4vw, 1.25rem);
   --text-kicker: 0.72rem;
 
-  --tracking-kicker: 0.18em;
+  --tracking-kicker: 0.1em;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -108,7 +108,6 @@
     font-size: var(--text-kicker);
     font-weight: 600;
     letter-spacing: var(--tracking-kicker);
-    text-transform: uppercase;
     color: var(--color-steel);
   }
 

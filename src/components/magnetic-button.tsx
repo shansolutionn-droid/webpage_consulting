@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useRef, type MouseEvent, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type To = "/" | "/approach" | "/services" | "/sectors" | "/about" | "/contact";
+type To = "/" | "/approach" | "/services" | "/capabilities" | "/about" | "/contact";
 
 export function MagneticButton({
   to,

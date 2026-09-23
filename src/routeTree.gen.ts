@@ -12,8 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ApproachRouteImport } from './routes/approach'
+import { Route as CapabilitiesRouteImport } from './routes/capabilities'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as SectorsRouteImport } from './routes/sectors'
 import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
@@ -31,14 +31,14 @@ const ApproachRoute = ApproachRouteImport.update({
   path: '/approach',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CapabilitiesRoute = CapabilitiesRouteImport.update({
+  id: '/capabilities',
+  path: '/capabilities',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SectorsRoute = SectorsRouteImport.update({
-  id: '/sectors',
-  path: '/sectors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -51,16 +51,16 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/capabilities': typeof CapabilitiesRoute
   '/contact': typeof ContactRoute
-  '/sectors': typeof SectorsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/capabilities': typeof CapabilitiesRoute
   '/contact': typeof ContactRoute
-  '/sectors': typeof SectorsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
@@ -68,23 +68,23 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/approach': typeof ApproachRoute
+  '/capabilities': typeof CapabilitiesRoute
   '/contact': typeof ContactRoute
-  '/sectors': typeof SectorsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/approach' | '/contact' | '/sectors' | '/services'
+    '/' | '/about' | '/approach' | '/capabilities' | '/contact' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/approach' | '/contact' | '/sectors' | '/services'
+  to: '/' | '/about' | '/approach' | '/capabilities' | '/contact' | '/services'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/approach'
+    | '/capabilities'
     | '/contact'
-    | '/sectors'
     | '/services'
   fileRoutesById: FileRoutesById
 }
@@ -92,8 +92,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ApproachRoute: typeof ApproachRoute
+  CapabilitiesRoute: typeof CapabilitiesRoute
   ContactRoute: typeof ContactRoute
-  SectorsRoute: typeof SectorsRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -120,18 +120,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApproachRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/capabilities': {
+      id: '/capabilities'
+      path: '/capabilities'
+      fullPath: '/capabilities'
+      preLoaderRoute: typeof CapabilitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sectors': {
-      id: '/sectors'
-      path: '/sectors'
-      fullPath: '/sectors'
-      preLoaderRoute: typeof SectorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -148,8 +148,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ApproachRoute: ApproachRoute,
+  CapabilitiesRoute: CapabilitiesRoute,
   ContactRoute: ContactRoute,
-  SectorsRoute: SectorsRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport

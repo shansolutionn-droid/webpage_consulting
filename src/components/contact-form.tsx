@@ -80,7 +80,7 @@ export function ContactForm() {
               autoComplete="name"
             />
           </Field>
-          <Field id="contact-email" label="Work email" error={err("email")}>
+          <Field id="contact-email" label="Email address" error={err("email")}>
             <Input
               id="contact-email"
               type="email"
@@ -130,12 +130,13 @@ export function ContactForm() {
             aria-invalid={Boolean(err("message"))}
             aria-describedby="contact-message-error"
             {...form.register("message")}
-            placeholder="Site, duty, timeline, and what has already been tried."
+            placeholder="Product, development stage, CAD or FEA support needed, and key requirements."
           />
         </Field>
         <div className="flex flex-wrap items-center justify-between gap-4 pt-1">
           <p className="max-w-xs text-xs text-muted">
-            Your email app opens with the brief filled in. Review it and press Send to contact AXIA.
+            Your email app opens with the brief filled in. Review it and press Send to contact
+            ShanSolution India.
           </p>
           <Button type="submit">Open email draft</Button>
         </div>

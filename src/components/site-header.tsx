@@ -74,10 +74,10 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:h-[4.25rem] sm:px-8">
         <Link to="/" className="flex items-center gap-2.5">
           <Mark />
-          <span className="font-display text-xl tracking-tight">{site.name}</span>
+          <span className="font-display text-base tracking-tight lg:text-xl">{site.name}</span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-4 md:flex lg:gap-8">
           {nav.map((item) => (
             <Link
               key={item.to}
@@ -98,7 +98,7 @@ export function SiteHeader() {
             to="/contact"
             className="inline-flex h-10 items-center rounded-md bg-paper px-4 text-sm font-semibold text-ink transition-transform duration-150 ease-out hover:bg-fg active:scale-[0.96]"
           >
-            Talk to us
+            Share a brief
           </Link>
         </div>
 
