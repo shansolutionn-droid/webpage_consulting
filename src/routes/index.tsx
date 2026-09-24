@@ -32,8 +32,9 @@ function Home() {
             className="mt-6 max-w-xl text-lead text-fg/75"
             style={{ animation: "fade-up 800ms 280ms var(--ease-out) both" }}
           >
-            From understanding the requirement to concepts, detailed design, engineering analysis,
-            and prototype support.
+            We specialize in managing the interface between engineering customers and specialized
+            execution partners, guiding projects from requirements through concepts, detailed
+            design, engineering analysis, and prototype support.
           </p>
           <div
             className="mt-10 flex flex-wrap items-center gap-3"
