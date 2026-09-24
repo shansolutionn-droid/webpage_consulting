@@ -10,7 +10,7 @@ function AboutPage() {
     <main>
       <PageHero
         kicker="About ShanSolution India"
-        title="Engineering support for product development."
+        title="Engineering support for product design and development."
         image="/images/product-development.jpg"
       >
         {site.name} provides product development support from the initial idea through CAD work and
