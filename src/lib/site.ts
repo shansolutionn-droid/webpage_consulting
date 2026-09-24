@@ -1,8 +1,9 @@
 export const site = {
   name: "ShanSolution India",
-  tagline: "Product development. CAD design. FEA validation.",
-  blurb: "Engineering support from requirement to solution.",
+  tagline: "From engineering requirement to prototype.",
+  blurb: "Engineering design & development",
   email: "rdsupport@shansolutionindia.com",
+  location: "Coimbatore, Tamil Nadu, India",
 } as const;
 
 export const nav = [
@@ -14,103 +15,194 @@ export const nav = [
 
 export const services = [
   {
-    slug: "product-development",
-    title: "End-to-end product development",
-    kicker: "From concept to solution",
+    slug: "concept-development",
+    title: "Concept development",
+    kicker: "From requirement to concept",
     summary:
-      "Product development support from scratch to solution, shaped around your product requirements and project stage.",
+      "We turn engineering requirements into practical mechanical concepts for detailed development.",
     points: [
-      "Support from the initial idea through design development",
-      "Engineering input across successive product stages",
-      "CAD and FEA activities connected to the development brief",
+      "Requirement analysis and functional understanding",
+      "Concept generation and comparison",
+      "Preliminary calculations and design feasibility",
+      "Concept selection",
     ],
+    outcome: "A technically feasible concept ready for detailed development.",
   },
   {
-    slug: "2d-cad",
-    title: "2D CAD drawing creation",
-    kicker: "2D CAD",
-    summary:
-      "2D drawing creation to define product geometry and communicate design intent clearly.",
+    slug: "3d-mechanical-design",
+    title: "3D mechanical design",
+    kicker: "Parts, assemblies & mechanisms",
+    summary: "We develop 3D models and assemblies based on the selected concept.",
     points: [
-      "2D CAD drawing creation from project requirements",
-      "Drawing updates as designs develop",
-      "Technical drawings prepared for engineering review",
+      "Mechanical components, assemblies and mechanisms",
+      "Sheet metal and structural components",
+      "Fixtures, tooling and special-purpose equipment",
+      "Design modifications and optimization",
     ],
+    outcome: "A 3D engineering model representing the proposed solution.",
   },
   {
-    slug: "3d-modelling",
-    title: "3D modelling",
-    kicker: "3D CAD",
+    slug: "2d-engineering-drawings",
+    title: "2D engineering drawings",
+    kicker: "Engineering documentation",
     summary:
-      "3D modelling to develop, review, and communicate product designs through the development process.",
+      "We prepare detailed drawings from 3D designs for engineering review and manufacturing.",
     points: [
-      "3D part and assembly modelling",
-      "Design development and model iterations",
-      "CAD geometry prepared for engineering review",
+      "Part, assembly and fabrication drawings",
+      "Manufacturing drawings and section views",
+      "Dimensions, tolerances and engineering notes",
+      "Bills of materials",
     ],
+    outcome: "Structured engineering documentation for the next stage of execution.",
   },
   {
-    slug: "fea-validation",
-    title: "FEA validation",
-    kicker: "Finite element analysis",
+    slug: "fea-engineering-analysis",
+    title: "FEA & engineering analysis",
+    kicker: "Engineering verification",
     summary:
-      "Finite element analysis to assess design response against agreed requirements and loading conditions.",
+      "Where required, we use analysis to evaluate structural behaviour and inform design decisions.",
     points: [
-      "FEA based on defined project inputs and conditions",
-      "Review of design response under specified loads",
-      "Engineering findings to inform validation and design decisions",
+      "Static structural, stress and deformation analysis",
+      "Load analysis and factor of safety evaluation",
+      "Engineering calculations and design verification support",
+      "Results review to identify potential design improvements",
     ],
+    outcome: "Analysis findings that support engineering decisions and design improvement.",
+  },
+  {
+    slug: "prototype-development",
+    title: "Prototype development",
+    kicker: "From design to physical prototype",
+    summary:
+      "We support prototype development from the finalized engineering design through coordinated execution.",
+    points: [
+      "Preparation of the engineering design for prototyping",
+      "Coordination of the defined prototype scope",
+      "Review of practical implementation",
+      "Design improvement based on prototype feedback",
+    ],
+    outcome: "A prototype stage that helps evaluate the solution before further development.",
+  },
+  {
+    slug: "engineering-project-management",
+    title: "Engineering project management",
+    kicker: "One engineering interface",
+    summary:
+      "We coordinate engineering activities and specialized execution partners around the customer's requirements.",
+    points: [
+      "Project scope, technical requirements and schedule",
+      "Design development and engineering communication",
+      "Execution partners and project progress",
+      "Deliverables aligned with the agreed scope",
+    ],
+    outcome: "A central engineering interface for projects involving multiple resources.",
   },
 ] as const;
 
-export const capabilities = services.slice(1);
+export const capabilities = [services[1], services[2], services[3]] as const;
 
-export const principles = [
+export const requirements = [
+  "Application and functional requirements",
+  "Operating conditions",
+  "Loads and constraints",
+  "Space limitations",
+  "Material requirements",
+  "Customer expectations and project timelines",
+] as const;
+
+export const reasons = [
   {
-    title: "Start with the brief",
-    copy: "Clarify the product requirements, available information, and outputs needed for the next project decision.",
+    title: "Engineering-focused approach",
+    copy: "We understand the technical requirement before starting the design.",
   },
   {
-    title: "Develop to the scope",
-    copy: "Shape product development and CAD work around the project stage and the engineering support required.",
+    title: "End-to-end development",
+    copy: "Concepts, 3D and 2D design, analysis and prototype support can be coordinated through one interface.",
   },
   {
-    title: "Validate the design",
-    copy: "Use FEA validation where it supports the agreed product requirements and design decisions.",
+    title: "Flexible technical resources",
+    copy: "Specialized engineering resources can be brought in according to each project's scope.",
   },
   {
-    title: "Share useful outputs",
-    copy: "Provide clear drawings, models, and engineering findings for project review and follow-up.",
+    title: "Practical engineering",
+    copy: "Design work is developed with practical implementation in view.",
+  },
+  {
+    title: "Project coordination",
+    copy: "Customers can work through one engineering project interface across multiple resources.",
+  },
+  {
+    title: "Scalable execution",
+    copy: "The approach can scale with project complexity and development requirements.",
+  },
+] as const;
+
+export const industries = [
+  {
+    title: "Wind energy",
+    copy: "Mechanical solutions, tools, fixtures, structures and component handling solutions.",
+  },
+  {
+    title: "Heavy engineering",
+    copy: "Mechanical design, structural development and engineering analysis.",
+  },
+  {
+    title: "Industrial machinery",
+    copy: "Special-purpose machines, mechanisms, fixtures and tooling.",
+  },
+  {
+    title: "Manufacturing",
+    copy: "Design development, drawings, engineering analysis and prototype support.",
+  },
+  {
+    title: "Automotive",
+    copy: "Mechanical components, fixtures, tooling and prototype development.",
+  },
+  {
+    title: "Industrial equipment",
+    copy: "Mechanical engineering and product development support.",
   },
 ] as const;
 
 export const process = [
   {
     n: "01",
-    title: "Understand the brief",
-    copy: "Review the product, requirements, constraints, and information available at the start.",
+    title: "Understand",
+    copy: "Understand the requirement, application, operating conditions and project objectives.",
   },
   {
     n: "02",
-    title: "Agree the scope",
-    copy: "Define the engineering tasks, expected outputs, and review points for the work.",
+    title: "Concept",
+    copy: "Develop and evaluate suitable engineering concepts.",
   },
   {
     n: "03",
-    title: "Develop the design",
-    copy: "Progress product development using 3D models and 2D drawings as the scope requires.",
+    title: "Design",
+    copy: "Develop the selected concept into detailed 3D and 2D designs.",
   },
   {
     n: "04",
-    title: "Validate and review",
-    copy: "Use FEA where needed, then share findings to support the next product decision.",
+    title: "Analyse",
+    copy: "Perform FEA and engineering calculations where required.",
+  },
+  {
+    n: "05",
+    title: "Develop",
+    copy: "Prepare the engineering design for prototype development.",
+  },
+  {
+    n: "06",
+    title: "Prototype",
+    copy: "Support prototype development through coordinated engineering execution.",
+  },
+  {
+    n: "07",
+    title: "Improve",
+    copy: "Incorporate development feedback into the engineering design as needed.",
   },
 ] as const;
 
 export const serviceOptions = [
-  "End-to-end product development",
-  "2D CAD drawing creation",
-  "3D modelling",
-  "FEA validation",
+  ...services.map((service) => service.title),
   "Not sure yet",
 ] as const;

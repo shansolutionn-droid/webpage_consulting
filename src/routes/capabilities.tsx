@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { capabilities, site } from "@/lib/site";
+import { capabilities } from "@/lib/site";
 
 export const Route = createFileRoute("/capabilities")({ component: CapabilitiesPage });
 
@@ -10,11 +10,11 @@ function CapabilitiesPage() {
     <main>
       <PageHero
         kicker="CAD & FEA"
-        title="Design detail and analysis for product development."
+        title="3D design, 2D drawings, and engineering analysis."
         image="/images/cad-drawings.jpg"
       >
-        {site.name} supports 2D drawing creation, 3D modelling, and FEA validation as part of
-        end-to-end product development or a clearly scoped engineering task.
+        Detailed models and drawings carry the selected concept into engineering review. Where
+        required, FEA and calculations help evaluate the design under defined conditions.
       </PageHero>
 
       <section className="bg-paper text-ink">
@@ -34,20 +34,58 @@ function CapabilitiesPage() {
                     <h2 className="mt-3 font-display text-title font-medium">{capability.title}</h2>
                     <p className="mt-4 text-sm leading-relaxed text-ink/65">{capability.summary}</p>
                   </div>
-                  <ul className="grid gap-3 md:col-span-6 md:col-start-7">
-                    {capability.points.map((point) => (
-                      <li
-                        key={point}
-                        className="border-b border-ink/10 pb-3 text-sm leading-relaxed text-ink/80 last:border-0"
-                      >
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="md:col-span-6 md:col-start-7">
+                    <ul className="grid gap-3">
+                      {capability.points.map((point) => (
+                        <li
+                          key={point}
+                          className="border-b border-ink/10 pb-3 text-sm leading-relaxed text-ink/80 last:border-0"
+                        >
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-6 border-l-2 border-brand pl-4 text-sm leading-relaxed text-ink/80">
+                      <strong>Outcome:</strong> {capability.outcome}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-surface">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <Reveal>
+            <p className="kicker">FEA approach</p>
+            <h2 className="mt-4 max-w-2xl font-display text-title font-medium">
+              Use analysis to improve the design.
+            </h2>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+              Define loads, build the model, apply constraints, analyse, evaluate results, and use
+              the findings to identify potential improvements.
+            </p>
+          </Reveal>
+          <ol className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "Define loads",
+              "Build model",
+              "Apply constraints",
+              "Analyse",
+              "Evaluate results",
+              "Improve design",
+            ].map((step, i) => (
+              <li
+                key={step}
+                className="rounded-lg border border-line bg-bg p-5 text-sm font-medium"
+              >
+                <span className="mr-3 text-steel">{String(i + 1).padStart(2, "0")}</span>
+                {step}
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

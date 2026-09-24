@@ -10,11 +10,11 @@ function ServicesPage() {
     <main>
       <PageHero
         kicker="Services"
-        title="Product development, from scratch to solution."
+        title="Engineering support from concept to prototype."
         image="/images/product-development.jpg"
       >
-        ShanSolution India provides end-to-end product development support, 2D CAD drawing creation,
-        3D modelling, and FEA validation. Choose the support that fits your project stage.
+        Select a defined engineering task or coordinate several stages through one project scope.
+        Each service starts with your requirements and the outputs you need.
       </PageHero>
       <section className="bg-paper text-ink">
         <div className="mx-auto max-w-6xl divide-y divide-ink/10 px-5 sm:px-8">
@@ -29,16 +29,21 @@ function ServicesPage() {
                     <h2 className="mt-3 font-display text-title font-medium">{svc.title}</h2>
                     <p className="mt-4 text-sm leading-relaxed text-ink/65">{svc.summary}</p>
                   </div>
-                  <ul className="grid gap-3 md:col-span-6 md:col-start-7">
-                    {svc.points.map((point) => (
-                      <li
-                        key={point}
-                        className="border-b border-ink/10 pb-3 text-sm leading-relaxed text-ink/80 last:border-0"
-                      >
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="md:col-span-6 md:col-start-7">
+                    <ul className="grid gap-3">
+                      {svc.points.map((point) => (
+                        <li
+                          key={point}
+                          className="border-b border-ink/10 pb-3 text-sm leading-relaxed text-ink/80 last:border-0"
+                        >
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="mt-6 border-l-2 border-brand pl-4 text-sm leading-relaxed text-ink/80">
+                      <strong>Outcome:</strong> {svc.outcome}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             </article>
@@ -48,7 +53,8 @@ function ServicesPage() {
       <section className="bg-bg">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-16 sm:px-8 md:flex-row md:items-center">
           <p className="max-w-md font-display text-2xl text-fg">
-            Not sure which service fits? Tell us about the product and where you are in development.
+            Not sure which service fits? Tell us about the requirement and where you are in
+            development.
           </p>
           <Link
             to="/contact"

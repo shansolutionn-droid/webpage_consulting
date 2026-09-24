@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { HeroCanvas } from "@/components/hero-canvas";
 import { MagneticButton } from "@/components/magnetic-button";
 import { Reveal, SplitWords } from "@/components/reveal";
-import { capabilities, principles, process, services, site } from "@/lib/site";
+import { industries, process, services, site } from "@/lib/site";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -26,15 +26,14 @@ function Home() {
             {site.blurb}
           </p>
           <h1 className="mt-5 max-w-4xl font-display text-display font-medium text-fg">
-            <SplitWords text="We are specialised in product design and development." />
+            <SplitWords text="Turning engineering requirements into practical solutions." />
           </h1>
           <p
             className="mt-6 max-w-xl text-lead text-fg/75"
             style={{ animation: "fade-up 800ms 280ms var(--ease-out) both" }}
           >
-            ShanSolution India provides engineering support to guide product development from
-            requirements to solution through requirement definition, concept development, 3D
-            modelling, FEA validation, and 2D drawing creation.
+            From understanding the requirement to concepts, detailed design, engineering analysis,
+            and prototype support.
           </p>
           <div
             className="mt-10 flex flex-wrap items-center gap-3"
@@ -52,29 +51,18 @@ function Home() {
       <section className="border-b border-line bg-bg">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <p className="kicker">Engineering support</p>
+            <p className="kicker">What we do</p>
             <h2 className="mt-4 font-display text-title font-medium">
-              Engineering support around your product brief.
+              Engineering design and development, shaped to the requirement.
             </h2>
           </Reveal>
           <Reveal className="md:col-span-6 md:col-start-7" delay={80}>
             <p className="text-lead text-muted">
-              We support product development from the initial idea through design work and
-              validation. The scope can cover the full development journey or a specific 2D CAD, 3D
-              modelling, or FEA requirement.
+              We work with engineering companies to understand technical requirements, develop
+              concepts, create 3D and 2D designs, analyse designs where required, and support
+              prototype development. Specialized partners can support the defined scope.
             </p>
           </Reveal>
-        </div>
-        <div className="mx-auto grid max-w-6xl grid-cols-2 border-t border-line sm:grid-cols-4">
-          {principles.map((principle) => (
-            <div
-              key={principle.title}
-              className="border-line px-5 py-8 sm:px-8 sm:py-10 [&:nth-child(odd)]:border-r sm:[&:not(:last-child)]:border-r"
-            >
-              <p className="font-display text-2xl font-medium text-fg">{principle.title}</p>
-              <p className="mt-2 text-xs leading-relaxed text-muted">{principle.copy}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -83,7 +71,7 @@ function Home() {
           <Reveal>
             <p className="kicker kicker-ink">What we do</p>
             <h2 className="mt-4 max-w-2xl font-display text-title font-medium">
-              From first concept to engineering validation.
+              From concept development to prototype support.
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-px overflow-hidden rounded-xl bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
@@ -119,24 +107,24 @@ function Home() {
         <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <Reveal>
-              <p className="kicker">CAD & FEA</p>
+              <p className="kicker">Our engineering process</p>
               <h2 className="mt-4 font-display text-title font-medium">
-                Design detail and analysis for product development.
+                A clear path from requirement to prototype.
               </h2>
             </Reveal>
             <Reveal delay={80}>
-              <Link to="/capabilities" className="text-sm font-semibold text-brand hover:text-fg">
-                Explore capabilities →
+              <Link to="/approach" className="text-sm font-semibold text-brand hover:text-fg">
+                Explore our approach →
               </Link>
             </Reveal>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {capabilities.map((capability, i) => (
-              <Reveal key={capability.slug} delay={i * 50}>
-                <article className="h-full rounded-xl bg-surface p-6 shadow-[var(--shadow-border)] sm:p-7">
-                  <p className="kicker">{String(i + 1).padStart(2, "0")}</p>
-                  <h3 className="mt-4 font-display text-2xl font-medium">{capability.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">{capability.summary}</p>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {process.map((step, i) => (
+              <Reveal key={step.n} delay={i * 45}>
+                <article className="h-full rounded-lg border border-line bg-surface p-5 shadow-[var(--shadow-border)] sm:p-6">
+                  <p className="kicker">{step.n}</p>
+                  <h3 className="mt-4 font-display text-2xl font-medium">{step.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{step.copy}</p>
                 </article>
               </Reveal>
             ))}
@@ -145,37 +133,23 @@ function Home() {
       </section>
 
       <section className="border-y border-line bg-surface">
-        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
           <Reveal>
-            <p className="kicker">How we work</p>
-            <h2 className="mt-4 font-display text-title font-medium">
-              A clear process, from product brief to next step.
+            <p className="kicker">Industries</p>
+            <h2 className="mt-4 max-w-2xl font-display text-title font-medium">
+              Engineering support across industrial sectors.
             </h2>
           </Reveal>
-          <ol className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {process.map((step, i) => (
-              <Reveal key={step.n} delay={i * 70} className="relative">
-                <p className="font-display text-4xl text-steel/50">{step.n}</p>
-                <h3 className="mt-4 font-display text-2xl font-medium">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted">{step.copy}</p>
+          <div className="mt-10 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3" role="list">
+            {industries.map((industry, i) => (
+              <Reveal key={industry.title} delay={i * 35}>
+                <div className="min-h-28 border-t border-line py-4" role="listitem">
+                  <h3 className="font-display text-xl font-medium">{industry.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{industry.copy}</p>
+                </div>
               </Reveal>
             ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="overflow-hidden bg-bg py-10">
-        <div className="marquee-track flex w-max gap-12 px-8 text-sm tracking-wide text-muted">
-          {[...Array(2)].map((_, copy) => (
-            <div key={copy} className="flex gap-12">
-              {capabilities.map((capability) => (
-                <span key={`${copy}-${capability.slug}`} className="flex items-center gap-12">
-                  {capability.title}
-                  <span className="current-dot inline-block size-1.5 rounded-full bg-steel" />
-                </span>
-              ))}
-            </div>
-          ))}
+          </div>
         </div>
       </section>
 
@@ -184,7 +158,7 @@ function Home() {
           <Reveal>
             <p className="kicker kicker-ink">Next</p>
             <h2 className="mt-4 max-w-xl font-display text-title font-medium">
-              Tell us what you are developing and the support you need.
+              Tell us your engineering requirement and the outcome you need.
             </h2>
           </Reveal>
           <Reveal delay={80}>

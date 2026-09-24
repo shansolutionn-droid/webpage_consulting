@@ -124,13 +124,13 @@ export function ContactForm() {
             ))}
           </select>
         </Field>
-        <Field id="contact-message" label="The problem, in plain words" error={err("message")}>
+        <Field id="contact-message" label="Your project brief" error={err("message")}>
           <Textarea
             id="contact-message"
             aria-invalid={Boolean(err("message"))}
             aria-describedby="contact-message-error"
             {...form.register("message")}
-            placeholder="Product, development stage, CAD or FEA support needed, and key requirements."
+            placeholder="Application, functional requirements, loads or constraints, project stage, timeline, and the support needed."
           />
         </Field>
         <div className="flex flex-wrap items-center justify-between gap-4 pt-1">

@@ -1,6 +1,6 @@
 # ShanSolution India website
 
-The public website for ShanSolution India, an engineering consultancy providing product development support from concept to solution, 2D CAD drawing creation, 3D modelling, and FEA validation.
+The public website for ShanSolution India, an engineering design and development company supporting projects from requirement understanding through concept, 3D and 2D design, engineering analysis, and prototype development. The company also coordinates specialized technical partners for defined scopes.
 
 - Production site: [www.shansolutionindia.com](https://www.shansolutionindia.com)
 - Cloudflare Pages project: `webpage-consulting`
