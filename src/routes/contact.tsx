@@ -14,7 +14,7 @@ function ContactPage() {
         image="/images/hero.jpg"
       >
         Tell us the application, operating conditions, constraints, timeline and support you need.
-        We are based in {site.location}.
+        Our address is listed below.
       </PageHero>
       <section className="bg-bg">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-12">
@@ -31,8 +31,14 @@ function ContactPage() {
               </p>
             </div>
             <div>
-              <p className="kicker">Location</p>
-              <p className="mt-3 text-sm text-muted">{site.location}</p>
+              <p className="kicker">Address</p>
+              <address className="mt-3 text-sm leading-relaxed text-muted not-italic">
+                {site.addressLines.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
+              </address>
             </div>
           </aside>
         </div>

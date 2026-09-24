@@ -8,7 +8,13 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
           <BrandLogo className="h-28 w-42 sm:h-32 sm:w-48" />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">{site.location}</p>
+          <address className="mt-4 max-w-sm text-sm leading-relaxed text-muted not-italic">
+            {site.addressLines.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </address>
         </div>
         <div className="md:col-span-3">
           <p className="kicker">Explore</p>

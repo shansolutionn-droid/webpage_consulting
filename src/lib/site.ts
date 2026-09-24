@@ -3,7 +3,12 @@ export const site = {
   tagline: "From engineering requirement to prototype.",
   blurb: "Engineering design & development",
   email: "rdsupport@shansolutionindia.com",
-  location: "Coimbatore, Tamil Nadu, India",
+  addressLines: [
+    "Sri Venkateswara Nagar,",
+    "3rd Cross street,",
+    "Kishikinta road,",
+    "Old Perunglathur, Tambaram, Chennai-63",
+  ],
 } as const;
 
 export const nav = [
