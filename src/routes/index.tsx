@@ -26,14 +26,15 @@ function Home() {
             {site.blurb}
           </p>
           <h1 className="mt-5 max-w-4xl font-display text-display font-medium text-fg">
-            <SplitWords text="Product development, from first concept to solution." />
+            <SplitWords text="We are specialised in product design and development." />
           </h1>
           <p
             className="mt-6 max-w-xl text-lead text-fg/75"
             style={{ animation: "fade-up 800ms 280ms var(--ease-out) both" }}
           >
-            ShanSolution India provides engineering support throughout product development,
-            including 2D CAD drawing creation, 3D modelling, and FEA validation.
+            ShanSolution India provides engineering support to guide product development from
+            requirements to solution through requirement definition, concept development, 3D
+            modelling, FEA validation, and 2D drawing creation.
           </p>
           <div
             className="mt-10 flex flex-wrap items-center gap-3"

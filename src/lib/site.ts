@@ -1,7 +1,7 @@
 export const site = {
   name: "ShanSolution India",
   tagline: "Product development. CAD design. FEA validation.",
-  blurb: "Engineering support from first concept through CAD and FEA.",
+  blurb: "Engineering support from requirement to solution.",
   email: "rdsupport@shansolutionindia.com",
 } as const;
 
@@ -98,7 +98,7 @@ export const process = [
   {
     n: "03",
     title: "Develop the design",
-    copy: "Progress product development using 2D drawings and 3D models as the scope requires.",
+    copy: "Progress product development using 3D models and 2D drawings as the scope requires.",
   },
   {
     n: "04",
