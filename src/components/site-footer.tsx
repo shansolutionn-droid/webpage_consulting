@@ -1,22 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/brand-logo";
+import { OfficeAddresses } from "@/components/office-addresses";
 import { nav, site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-bg text-fg">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-12 md:py-20">
-        <div className="md:col-span-5">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 md:py-20 lg:grid-cols-12">
+        <div className="lg:col-span-6">
           <BrandLogo className="h-28 w-42 sm:h-32 sm:w-48" />
-          <address className="mt-4 max-w-sm text-sm leading-relaxed text-muted not-italic">
-            {site.addressLines.map((line) => (
-              <span key={line} className="block">
-                {line}
-              </span>
-            ))}
-          </address>
+          <div className="mt-6">
+            <OfficeAddresses />
+          </div>
         </div>
-        <div className="md:col-span-3">
+        <div className="lg:col-span-2">
           <p className="kicker">Explore</p>
           <ul className="mt-4 space-y-2 text-sm">
             {nav.map((item) => (
@@ -33,7 +30,7 @@ export function SiteFooter() {
             </li>
           </ul>
         </div>
-        <div className="md:col-span-4">
+        <div className="lg:col-span-4">
           <p className="kicker">Get in touch</p>
           <p className="mt-4 text-sm">
             <a href={`mailto:${site.email}`} className="hover:text-steel">

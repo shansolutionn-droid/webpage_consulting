@@ -3,10 +3,24 @@ export const site = {
   tagline: "From engineering requirement to prototype.",
   blurb: "Engineering design & development",
   email: "rdsupport@shansolutionindia.com",
-  addressLines: [
-    "Bidare Agraha, Doddabanahalli",
-    "Bengaluru, Karnataka – 560067",
-    "India",
+  offices: [
+    {
+      label: "Bengaluru Office",
+      addressLines: [
+        "Bidare Agraha, Doddabanahalli",
+        "Bengaluru, Karnataka – 560067",
+        "India",
+      ],
+    },
+    {
+      label: "Chennai Branch",
+      addressLines: [
+        "Sri Venkateswara Nagar",
+        "3rd Cross Street, Kishikinta Road",
+        "Old Perunglathur, Tambaram",
+        "Chennai – 63, Tamil Nadu, India",
+      ],
+    },
   ],
 } as const;
 
