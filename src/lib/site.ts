@@ -4,10 +4,9 @@ export const site = {
   blurb: "Engineering design & development",
   email: "rdsupport@shansolutionindia.com",
   addressLines: [
-    "Sri Venkateswara Nagar,",
-    "3rd Cross street,",
-    "Kishikinta road,",
-    "Old Perunglathur, Tambaram, Chennai-63",
+    "Bidare Agraha, Doddabanahalli",
+    "Bengaluru, Karnataka – 560067",
+    "India",
   ],
 } as const;
 
